@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps Deployment</title>
+
+    <link rel="stylesheet" href="frontend/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">DevOps Project</div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#deployment">Deployment</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="tag">DOCKER • APACHE • AWS</p>
+
+                <h1>
+                    DevOps Deployment
+                    <br>
+                    <span>Made Simple</span>
+                </h1>
+
+                <p class="description">
+                    A simple frontend application deployed inside
+                    an Apache HTTPD Docker container.
+                </p>
+
+                <button onclick="showStatus()">
+                    Check Deployment
+                </button>
+
+                <p id="status"></p>
+
+            </div>
+
+        </section>
+
+
+        <section id="about" class="section">
+
+            <h2>About This Project</h2>
+
+            <p>
+                This application is built as part of a DevOps project.
+                The frontend is packaged into a Docker image using
+                Apache HTTP Server.
+            </p>
+
+        </section>
+
+
+        <section id="deployment" class="section">
+
+            <h2>Deployment Stack</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Docker</h3>
+                    <p>
+                        Packages the frontend application into
+                        a portable container.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Apache HTTPD</h3>
+                    <p>
+                        Serves the frontend files from inside
+                        the Docker container.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>AWS</h3>
+                    <p>
+                        The container can be deployed on an
+                        AWS EC2 instance.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Jenkins</h3>
+                    <p>
+                        Automates the infrastructure and
+                        deployment workflow.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>DevOps Project &copy; 2026</p>
+    </footer>
+
+
+    <script src="frontend/script.js"></script>
+
+</body>
+</html>
