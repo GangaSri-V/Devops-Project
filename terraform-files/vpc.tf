@@ -40,7 +40,7 @@ resource "aws_route_table" "rt" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.devops_vpc_gw.id
+    gateway_id = aws_internet_gateway.gw.id
   }
 
   tags = {
@@ -50,12 +50,12 @@ resource "aws_route_table" "rt" {
 
 resource "aws_route_table_association" "rt_sub1" {
   subnet_id      = aws_subnet.public_sub_1.id
-  route_table_id = aws_route_table.devops_vpc_rt.id
+  route_table_id = aws_route_table.rt.id
 }
 
 resource "aws_route_table_association" "rt_sub2" {
   subnet_id      = aws_subnet.public_sub_2.id
-  route_table_id = aws_route_table.devops_vpc_rt.id
+  route_table_id = aws_route_table.rt.id
 }
 
 
