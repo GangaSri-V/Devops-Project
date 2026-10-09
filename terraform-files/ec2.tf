@@ -6,13 +6,12 @@ resource "aws_instance" "ec2-1" {
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   associate_public_ip_address = "true"
 
-  user_data = <<-EOF
-    # commands
-    dnf update -y
-    dnf install -y docker
-    systemctl start docker
-    systemctl enable docker
-  EOF
+user_data = <<-EOF
+#!/bin/bash
+dnf update -y
+dnf install -y docker
+systemctl enable --now docker
+EOF
 
   tags = {
     Name = "devops_ec2_1"
